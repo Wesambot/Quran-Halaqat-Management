@@ -118,7 +118,9 @@ QURAN_SURAS = [
 ]
 
 def get_surah(number: int) -> dict:
-    """إرجاع بيانات سورة برقمها (1-114)."""
+    """إرجاع بيانات سورة برقمها (1-114)، أو None إذا كان الرقم غير صالح."""
+    if type(number) is not int or not 1 <= number <= len(QURAN_SURAS):
+        return None
     return QURAN_SURAS[number - 1]
 
 
