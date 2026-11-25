@@ -36,7 +36,7 @@ def test_compute_ayah_span_inside_one_surah():
 
 def test_compute_ayah_span_across_surahs():
     result = compute_ayah_span(1, 7, 2, 2)
-    assert result["ayat_count"] == 9
+    assert result["ayat_count"] == 3
     assert result["from_sura_name"] == "الفاتحة"
     assert result["to_sura_name"] == "البقرة"
 
